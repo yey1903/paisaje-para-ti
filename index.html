@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Justine</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        let messages = [
+            '"En tu mirada encuentro<br>la paz que en mi alma anhelo,<br>y en tu sonrisa reflejo<br>el amor que al mundo entrego."',
+            '"Tu presencia llena mi vida de luz,<br>como el sol que ilumina la mañana,<br>y mi corazón late por ti, Justine."',
+            '"Cada día a tu lado es una bendición,<br>eres mi sol, mi luna y todas mis estrellas."',
+            '"Tus palabras son como dulces melodías,<br>y tu amor es la fuerza que guía mi ser."'
+        ];
+
+        let index = 0;
+
+        function changeMessage() {
+            document.getElementById('poem').innerHTML = messages[index];
+            index = (index + 1) % messages.length;
+        }
+
+        setInterval(changeMessage, 5000); // Cambia el mensaje cada 5 segundos
+    </script>
+</head>
+<body>
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="mountains"></div>
+        <div class="container">
+            <h1>Para Justine</h1>
+            <p id="poem" class="poem">"En tu mirada encuentro<br>la paz que en mi alma anhelo,<br>y en tu sonrisa reflejo<br>el amor que al mundo entrego."</p>
+            <p>Eres mi inspiración, mi fuerza y mi paz. Gracias por ser tú.</p>
+        </div>
+        <div class="signature">Siempre tuyo, Jeff</div>
+    </div>
+    <footer>
+        Con todo mi amor, siempre.
+    </footer>
+</body>
+</html>
